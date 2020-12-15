@@ -14,7 +14,7 @@
     </p>
     
     <img id="flower" src="https://cdn.shopify.com/s/files/1/0250/2151/3807/products/ae4c0914c229f7c3239223a9c1711a6e_dcb85b58-7bb5-43e9-9763-2154058f0e26_1200x.jpg?v=1595525161" width="500" height="500">
-    <button onclick="changeImage()">Click Me :)</button>
+    <button onclick="changeFlower()">Click Me :)</button>
     
     
   
@@ -22,28 +22,27 @@
   </body>
   
   <script>
-   function changeImage(){
-      var  = [
-        "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/english-daisy-types-1586980894.jpg?crop=1.00xw:0.836xh;0,0.164xh&resize=480:*", // index 0
-        "", // index 1
-        "https://marvel-b1-cdn.bc0a.com/f00000000139987/www.gardeners.com/on/demandware.static/-/Library-Sites-SharedLibrary/default/dw94d0f4b9/Articles/Gardening/Hero_Thumbnail/7141-purple-tulips.jpg", // index 2
-        "https://i.pinimg.com/736x/88/42/01/884201b748e4f2bf4784f396be99011c.jpg",
-        "https://www.thespruce.com/thmb/aIoABeMBtlIwTmsylunDKQO2xzI=/2125x1195/smart/filters:no_upscale()/GettyImages-175547214-5b7339b846e0fb0050157121.jpg",
-        "https://www.homestratosphere.com/wp-content/uploads/2018/05/carnations-may112018.jpg",
-      ];
+   function changeFlower(){
+    var  = [
+      "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/english-daisy-types-1586980894.jpg?crop=1.00xw:0.836xh;0,0.164xh&resize=480:*", // index 0
+      "https://marvel-b1-cdn.bc0a.com/f00000000139987/www.gardeners.com/on/demandware.static/-/Library-Sites-SharedLibrary/default/dw94d0f4b9/Articles/Gardening/Hero_Thumbnail/7141-purple-tulips.jpg", // index 1
+      "https://i.pinimg.com/736x/88/42/01/884201b748e4f2bf4784f396be99011c.jpg",
+      "https://www.thespruce.com/thmb/aIoABeMBtlIwTmsylunDKQO2xzI=/2125x1195/smart/filters:no_upscale()/GettyImages-175547214-5b7339b846e0fb0050157121.jpg",
+      "https://www.homestratosphere.com/wp-content/uploads/2018/05/carnations-may112018.jpg",
+    ];
 
-      var doc = document.getElementById("flower");
+    var doc = document.getElementById("flower");
 
-      var length = flower.length;
+    var length = flower.length;
 
-      var randomNumber = Math.floor(Math.random() * length); // random number between 0 and length-1
-      var value = flower[randomNumber];
+    var randomNumber = Math.floor(Math.random() * length); // random number between 0 and length-1
+    var value = flower[randomNumber];
 
-      while (value == doc.src) {
-        randomNumber = Math.floor(Math.random() * length); // random number between 0 and length-1
-        value = flower[randomNumber];
-      }
-      doc.src = value;
+    while (value == doc.src) {
+      randomNumber = Math.floor(Math.random() * length); // random number between 0 and length-1
+      value = flower[randomNumber];
+    }
+    doc.src = value;
    }
   </script>
 </html>
