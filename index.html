@@ -1,0 +1,47 @@
+<html>
+  <body>
+    <h1>
+    Rose's Website :D
+    </h1>
+    
+    <h2>
+    Welcome!
+    </h2>
+    
+    <p>
+    Idk what to put here,, <br />
+    Click on the picture
+    </p>
+    
+    <img id="image" src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.davidaustinroses.com%2Fproducts%2Froald-dahl&psig=AOvVaw39WJnxtmN9ocgtKj1DUZxQ&ust=1608078894735000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCJCazvHezu0CFQAAAAAdAAAAABAD" width="500" height="500">
+    <button onclick="changeImage()">Click Me :)</button>
+    
+    
+  
+  
+  </body>
+  
+  <script>
+   function changeImage(){
+      var doggos = [
+        "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/english-daisy-types-1586980894.jpg?crop=1.00xw:0.836xh;0,0.164xh&resize=480:*", // index 0
+        "https://i.ytimg.com/vi/MPV2METPeJU/maxresdefault.jpg", // index 1
+        "https://cdn.orvis.com/images/DBS_GoldRetriever_1280.jpg", // index 2
+        "https://i.kym-cdn.com/entries/icons/mobile/000/013/564/doge.jpg",
+        "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg?crop=1.00xw:0.669xh;0,0.190xh&resize=1200:*",
+        "https://d17fnq9dkz9hgj.cloudfront.net/uploads/2018/04/Siberian-Husky_01.jpg",
+      ];
+
+      var doc = document.getElementById("doggo");
+
+      var length = doggos.length;
+
+      var randomNumber = Math.floor(Math.random() * length); // random number between 0 and length-1
+      var value = doggos[randomNumber];
+
+      while (value == doc.src) {
+        randomNumber = Math.floor(Math.random() * length); // random number between 0 and length-1
+        value = doggos[randomNumber];
+      }
+  </script>
+</html>
