@@ -13,7 +13,7 @@
     Click on the picture
     </p>
     
-    <img id="image" src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.davidaustinroses.com%2Fproducts%2Froald-dahl&psig=AOvVaw39WJnxtmN9ocgtKj1DUZxQ&ust=1608078894735000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCJCazvHezu0CFQAAAAAdAAAAABAD" width="500" height="500">
+    <img id="flower" src="https://cdn.shopify.com/s/files/1/0250/2151/3807/products/ae4c0914c229f7c3239223a9c1711a6e_dcb85b58-7bb5-43e9-9763-2154058f0e26_1200x.jpg?v=1595525161" width="500" height="500">
     <button onclick="changeImage()">Click Me :)</button>
     
     
@@ -23,25 +23,26 @@
   
   <script>
    function changeImage(){
-      var doggos = [
+      var  = [
         "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/english-daisy-types-1586980894.jpg?crop=1.00xw:0.836xh;0,0.164xh&resize=480:*", // index 0
-        "https://i.ytimg.com/vi/MPV2METPeJU/maxresdefault.jpg", // index 1
-        "https://cdn.orvis.com/images/DBS_GoldRetriever_1280.jpg", // index 2
-        "https://i.kym-cdn.com/entries/icons/mobile/000/013/564/doge.jpg",
-        "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg?crop=1.00xw:0.669xh;0,0.190xh&resize=1200:*",
-        "https://d17fnq9dkz9hgj.cloudfront.net/uploads/2018/04/Siberian-Husky_01.jpg",
+        "", // index 1
+        "https://marvel-b1-cdn.bc0a.com/f00000000139987/www.gardeners.com/on/demandware.static/-/Library-Sites-SharedLibrary/default/dw94d0f4b9/Articles/Gardening/Hero_Thumbnail/7141-purple-tulips.jpg", // index 2
+        "https://i.pinimg.com/736x/88/42/01/884201b748e4f2bf4784f396be99011c.jpg",
+        "https://www.thespruce.com/thmb/aIoABeMBtlIwTmsylunDKQO2xzI=/2125x1195/smart/filters:no_upscale()/GettyImages-175547214-5b7339b846e0fb0050157121.jpg",
+        "https://www.homestratosphere.com/wp-content/uploads/2018/05/carnations-may112018.jpg",
       ];
 
-      var doc = document.getElementById("doggo");
+      var doc = document.getElementById("flower");
 
-      var length = doggos.length;
+      var length = flower.length;
 
       var randomNumber = Math.floor(Math.random() * length); // random number between 0 and length-1
-      var value = doggos[randomNumber];
+      var value = flower[randomNumber];
 
       while (value == doc.src) {
         randomNumber = Math.floor(Math.random() * length); // random number between 0 and length-1
-        value = doggos[randomNumber];
+        value = flower[randomNumber];
       }
+     doc.src = value;
   </script>
 </html>
