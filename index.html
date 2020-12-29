@@ -1,49 +1,55 @@
 <html>
-  <body style="background-color:#e1e1ea;" id="bodycolor">
-    
-    <h1>
-    Rose's Website :D
-    </h1>
-    
-    <h2>
-    Welcome!
-    </h2>
-    
-    <p>
-    Idk what to put here,, <br />
-    Click on the picture
-    </p>
-    
-    <img id="flower" src="https://cdn.shopify.com/s/files/1/0250/2151/3807/products/ae4c0914c229f7c3239223a9c1711a6e_dcb85b58-7bb5-43e9-9763-2154058f0e26_1200x.jpg?v=1595525161" width="500" height="500">
-    <button onclick="changeFlower()">Click Me :)</button>
-    
-    
-  
-  
-  </body>
-  
-  <script>
-   function changeFlower(){
-    var flower = [
-      "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/english-daisy-types-1586980894.jpg?crop=1.00xw:0.836xh;0,0.164xh&resize=480:*", // index 0
-      "https://marvel-b1-cdn.bc0a.com/f00000000139987/www.gardeners.com/on/demandware.static/-/Library-Sites-SharedLibrary/default/dw94d0f4b9/Articles/Gardening/Hero_Thumbnail/7141-purple-tulips.jpg", // index 1
-      "https://i.pinimg.com/736x/88/42/01/884201b748e4f2bf4784f396be99011c.jpg",
-      "https://www.thespruce.com/thmb/aIoABeMBtlIwTmsylunDKQO2xzI=/2125x1195/smart/filters:no_upscale()/GettyImages-175547214-5b7339b846e0fb0050157121.jpg",
-      "https://www.homestratosphere.com/wp-content/uploads/2018/05/carnations-may112018.jpg"
-    ];
+    <style>
+        .pianokey {
+            width:50px;
+            height:300px;
+            border:2px solid black;
+            font-size:50;
+        }
+    </style>
 
-    var doc = document.getElementById("flower");
 
-    var length = flower.length;
+    <body style="background-color:pink">
 
-    var randomNumber = Math.floor(Math.random() * length); // random number between 0 and length-1
-    var value = flower[randomNumber];
+        <div style="display: flex; justify-content: center; text-align: center">
 
-    while (value == doc.src) {
-      randomNumber = Math.floor(Math.random() * length); // random number between 0 and length-1
-      value = flower[randomNumber];
-    }
-    doc.src = value;
-   }
-  </script>
+            <div onclick="playNote('c4')" class="pianokey">C</div>
+            <div onclick="playNote('d4')" class="pianokey">D</div>
+            <div onclick="playNote('e4')" class="pianokey">E</div>
+            <div onclick="playNote('f4')" class="pianokey">F</div>
+            <div onclick="playNote('g4')" class="pianokey">G</div>
+            <div onclick="playNote('a5')" class="pianokey">A</div>
+            <div onclick="playNote('b5')" class="pianokey">B</div>
+            <div onclick="playNote('c5')" class="pianokey">C</div>
+
+        </div>
+
+    </body>
+
 </html>
+
+<script>
+
+    document.body.onkeydown = async function(e) {
+        console.log(e);
+
+        switch (e.key){
+            case 'a': case 'A': playNote('c4'); break;
+            case 's': case 'S': playNote('d4'); break;
+            case 'd': case 'D': playNote('e4'); break;
+            case 'f': case 'F': playNote('f4'); break;
+            case 'g': case 'G': playNote('g4'); break;
+            case 'h': case 'H': playNote('a5'); break;
+            case 'j': case 'J': playNote('b5'); break;
+            case 'k': case 'K': playNote('c5'); break;
+
+        }
+    }
+
+    function playNote(note){
+        var audio = document.createElement("AUDIO");
+        audio.src = "https://raw.githubusercontent.com/brandonxia01/CodingClub/master/websites/piano/notes/" + note + ".mp3"
+        audio.play();
+    }
+
+</script>
