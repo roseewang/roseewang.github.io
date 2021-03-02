@@ -51,7 +51,7 @@
 
     function playNote(note){
         var pianoKey = document.getElementById(note);
-        pianoKey.style.backgroundcolor = "lightblue";
+        pianoKey.style.backgroundColor = "lightblue";
         var audio = document.createElement("AUDIO");
         audio.src = "https://raw.githubusercontent.com/brandonxia01/CodingClub/master/websites/piano/notes/" + note + ".mp3"
         audio.play();
