@@ -13,14 +13,14 @@
 
         <div style="display: flex; justify-content: center; text-align: center">
 
-            <div onclick="playNote('c4')" class="pianokey">C</div>
-            <div onclick="playNote('d4')" class="pianokey">D</div>
-            <div onclick="playNote('e4')" class="pianokey">E</div>
-            <div onclick="playNote('f4')" class="pianokey">F</div>
-            <div onclick="playNote('g4')" class="pianokey">G</div>
-            <div onclick="playNote('a5')" class="pianokey">A</div>
-            <div onclick="playNote('b5')" class="pianokey">B</div>
-            <div onclick="playNote('c5')" class="pianokey">C</div>
+            <div id = "c4" onclick="playNote('c4')" class="pianokey">C</div>
+            <div id = "d4" onclick="playNote('d4')" class="pianokey">D</div>
+            <div id="e4" onclick="playNote('e4')" class="pianokey">E</div>
+            <div id="f4" onclick="playNote('f4')" class="pianokey">F</div>
+            <div id="g4" onclick="playNote('g4')" class="pianokey">G</div>
+            <div id="a5" onclick="playNote('a5')" class="pianokey">A</div>
+            <div id="b5" onclick="playNote('b5')" class="pianokey">B</div>
+            <div id="c5" onclick="playNote('c5')" class="pianokey">C</div>
 
         </div>
         <h2 style="text-align: center;">
@@ -50,6 +50,8 @@
     }
 
     function playNote(note){
+        var pianoKey = document.getElementById(note);
+        pianoKey.style.backgroundcolor = "lightblue";
         var audio = document.createElement("AUDIO");
         audio.src = "https://raw.githubusercontent.com/brandonxia01/CodingClub/master/websites/piano/notes/" + note + ".mp3"
         audio.play();
