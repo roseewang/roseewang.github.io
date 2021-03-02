@@ -55,6 +55,11 @@
         var audio = document.createElement("AUDIO");
         audio.src = "https://raw.githubusercontent.com/brandonxia01/CodingClub/master/websites/piano/notes/" + note + ".mp3"
         audio.play();
+        
+        new Promise (r => setTimeout (r, 400))
+        .then(() => {
+            pianoKey.style.backgroundColor = "pink";
+        })
     }
 
 </script>
